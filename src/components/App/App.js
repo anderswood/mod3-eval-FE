@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
-import Users from '../../containers/Users'
+import QuizContainer from '../../containers/QuizContainer'
+import CreateQuestionContainer from '../../containers/CreateQuestionContainer.js'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome To Quizzer</h1>
-        <Users />
+        <QuizContainer />
+        <CreateQuestionContainer />
       </div>
     );
   }

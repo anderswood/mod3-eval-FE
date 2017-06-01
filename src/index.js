@@ -7,6 +7,7 @@ import './index.css';
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, compose } from 'redux'
 import reducers from './reducers'
+import { fetchQuestions } from './actions/index.js'
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
@@ -16,6 +17,8 @@ const enhancers = compose(
 )
 
 const store = createStore(reducers, {}, enhancers)
+
+store.dispatch(fetchQuestions())
 
 render(
   <Provider store={store}>
